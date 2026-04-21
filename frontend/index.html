@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% set title = "Home — CyberSafe | Stop Cyberbullying" %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-badge">
+    <i class="fas fa-shield-halved"></i>
+    AI-Powered Protection
+  </div>
+  <h1>Stop Cyberbullying<br>Before It Starts</h1>
+  <p>Detect harmful content with AI, report incidents securely, and get matched with the right legal protections — all in one platform.</p>
+  <div class="hero-actions">
+    <a href="{{ url_for('detect_page') }}" class="btn btn-primary">
+      <i class="fas fa-magnifying-glass"></i> Analyze Text
+    </a>
+    <a href="{{ url_for('report_page') }}" class="btn btn-secondary">
+      <i class="fas fa-flag"></i> File a Report
+    </a>
+  </div>
+
+  <div class="stats-row" style="max-width:760px; margin:60px auto 0;">
+    <div class="stat-card red fade-in">
+      <div class="stat-icon red"><i class="fas fa-brain"></i></div>
+      <h3>AI Detection</h3>
+      <p style="font-size:14px; color:var(--text-secondary);">BERT-based NLP model for accurate toxicity classification</p>
+    </div>
+    <div class="stat-card blue fade-in">
+      <div class="stat-icon blue"><i class="fas fa-scale-balanced"></i></div>
+      <h3>Legal Mapping</h3>
+      <p style="font-size:14px; color:var(--text-secondary);">Auto-maps detected content to relevant IPC & IT Act sections</p>
+    </div>
+    <div class="stat-card green fade-in">
+      <div class="stat-icon green"><i class="fas fa-chart-pie"></i></div>
+      <h3>Live Dashboard</h3>
+      <p style="font-size:14px; color:var(--text-secondary);">Track complaints, severity trends, and resolution status</p>
+    </div>
+  </div>
+</section>
+
+<section class="awareness">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2><i class="fas fa-circle-info" style="color:var(--accent); margin-right:10px;"></i>What is Cyberbullying?</h2>
+    <p style="margin-bottom:24px;">
+      Cyberbullying is the use of digital platforms to harass, threaten, or humiliate individuals repeatedly. It can occur on social media, messaging apps, email, gaming platforms, and more.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background: rgba(230,57,70,0.1); color: var(--accent-light);">
+          <i class="fas fa-comment-slash"></i>
+        </div>
+        <h3>Hate Speech</h3>
+        <p>Offensive language targeting someone's identity, appearance, or beliefs.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background: rgba(67,97,238,0.1); color: var(--blue-light);">
+          <i class="fas fa-user-secret"></i>
+        </div>
+        <h3>Stalking</h3>
+        <p>Repeated unwanted contact, monitoring, or following online.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background: rgba(247,127,0,0.1); color: var(--orange);">
+          <i class="fas fa-skull-crossbones"></i>
+        </div>
+        <h3>Threats</h3>
+        <p>Direct or implied threats of physical harm or violence.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon" style="background: rgba(123,47,247,0.1); color: var(--purple);">
+          <i class="fas fa-eye-slash"></i>
+        </div>
+        <h3>Privacy Violation</h3>
+        <p>Sharing private images, personal info, or recordings without consent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

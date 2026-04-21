@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% set title = "Report Case — CyberSafe" %}
+
+{% block content %}
+<section class="container">
+  <h2 class="section-title"><i class="fas fa-flag" style="margin-right:8px;"></i>Report a Case</h2>
+  <p class="section-subtitle">Fill in the details below to register a cyberbullying complaint. We'll analyze the content and map it to relevant legal sections.</p>
+
+  <div class="glass-card">
+    <label for="name"><i class="fas fa-user"></i> Victim Name</label>
+    <input type="text" id="name" placeholder="Enter the victim's name">
+
+    <label for="platform"><i class="fas fa-globe"></i> Platform</label>
+    <select id="platform">
+      <option value="Instagram">Instagram</option>
+      <option value="Facebook">Facebook</option>
+      <option value="Twitter">Twitter / X</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Snapchat">Snapchat</option>
+      <option value="Telegram">Telegram</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="complaintText"><i class="fas fa-comment-dots"></i> Bullying Content</label>
+    <textarea id="complaintText" placeholder="Paste or describe the bullying content here..."></textarea>
+
+    <label for="screenshot"><i class="fas fa-image"></i> Screenshot (optional)</label>
+    <input type="file" id="screenshot" accept="image/*" onchange="previewImage()">
+    <img id="preview" style="display:none; margin-bottom:18px;" />
+
+    <button onclick="submitComplaint()">
+      <i class="fas fa-paper-plane"></i> Submit Report
+    </button>
+  </div>
+
+  <div id="reportResult" style="margin-top:24px;"></div>
+</section>
+{% endblock %}
+
+{% block body_extra %}
+<script src="{{ url_for('static', filename='js/report.js') }}"></script>
+{% endblock %}

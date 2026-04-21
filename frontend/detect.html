@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% set title = "Detect Bullying — CyberSafe" %}
+
+{% block content %}
+<section class="container">
+  <h2 class="section-title"><i class="fas fa-magnifying-glass" style="margin-right:8px;"></i>Cyberbullying Detection</h2>
+  <p class="section-subtitle">Paste any text below and our AI model will analyze it for toxicity, threats, and harassment patterns.</p>
+
+  <div class="glass-card" style="margin-bottom:24px;">
+    <label for="bullyText"><i class="fas fa-keyboard"></i> Enter text to analyze</label>
+    <textarea id="bullyText" placeholder="Paste or type the message you want to analyze..."></textarea>
+    <button id="analyzeBtn" onclick="analyzeText()">
+      <i class="fas fa-bolt"></i> Analyze Now
+    </button>
+  </div>
+
+  <div id="loader" style="display:none;">
+    <span>Analyzing with AI model...</span>
+  </div>
+
+  <div id="resultCard"></div>
+  <div id="alertBanner"></div>
+
+  <!-- Chatbot Section -->
+  <hr style="margin:48px 0 0; border:none; border-top:1px solid var(--border);">
+
+  <section id="chatbot-panel" style="max-width:900px; margin-top:32px;">
+    <h3>
+      <i class="fas fa-robot" style="color:var(--accent);"></i>
+      Chatbot Assistant
+    </h3>
+
+    <div id="chatbox"
+         style="height:280px; overflow:auto;">
+      <div style="opacity:0.85; margin-bottom:10px; font-size:14px; line-height:1.6;">
+        👋 Hi! I'm your CyberSafe assistant. Ask me anything — how to use the app, legal questions, or just chat!
+      </div>
+    </div>
+
+    <div style="display:flex; gap:10px; margin-top:12px;">
+      <input id="chatInput" type="text" placeholder="Type a message..."
+             style="flex:1;">
+      <button id="chatSendBtn">
+        <i class="fas fa-paper-plane"></i> Send
+      </button>
+    </div>
+
+    <small style="opacity:0.5; display:block; margin-top:10px; font-size:12px;">
+      <i class="fas fa-circle-info"></i> Chat runs separately from detection and won't affect your analysis results.
+    </small>
+  </section>
+</section>
+{% endblock %}
+
+{% block body_extra %}
+<script src="{{ url_for('static', filename='js/detect.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% set title = "Legal Help — CyberSafe" %}
+
+{% block content %}
+<section class="container">
+  <h2 class="section-title"><i class="fas fa-scale-balanced" style="margin-right:8px;"></i>Legal Support & Awareness</h2>
+  <p class="section-subtitle">Key Indian laws that protect victims of cyberbullying and online harassment. Know your rights.</p>
+
+  <ul class="legal-list">
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-gavel"></i></div>
+      <div><b>IPC 503</b> — Criminal intimidation — threats of injury to person, reputation, or property.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-hand"></i></div>
+      <div><b>IPC 509</b> — Insult to modesty — words, gestures, or acts intended to insult dignity.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-eye"></i></div>
+      <div><b>IPC 354D</b> — Stalking / cyber stalking — repeated following, contacting, or monitoring.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-triangle-exclamation"></i></div>
+      <div><b>IPC 354A</b> — Sexual harassment — unwelcome sexually-tinted behavior or demands.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-lock"></i></div>
+      <div><b>IT Act 66E</b> — Violation of privacy — capturing or publishing private images online.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-ban"></i></div>
+      <div><b>IT Act 67A</b> — Sexually explicit content — publishing or transmitting obscene material electronically.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon"><i class="fas fa-child"></i></div>
+      <div><b>IT Act 67B</b> — Child sexual abuse material (CSAM) — strictest penalties; report immediately.</div>
+    </li>
+    <li class="fade-in">
+      <div class="legal-icon" style="background: rgba(6,214,160,0.1); color: var(--green);"><i class="fas fa-globe"></i></div>
+      <div><b>Cyber Crime Portal</b> — Online FIR & reporting at <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--cyan); text-decoration:underline;">cybercrime.gov.in</a></div>
+    </li>
+  </ul>
+
+  <div class="glass-card fade-in" style="margin-top:32px; display:flex; align-items:flex-start; gap:16px;">
+    <i class="fas fa-circle-info" style="color:var(--cyan); font-size:20px; margin-top:2px;"></i>
+    <div>
+      <p style="font-weight:600; margin-bottom:4px;">Disclaimer</p>
+      <p style="color:var(--text-secondary); font-size:14px; line-height:1.7;">
+        This information is provided for awareness and educational purposes. 
+        For rsensitive cases, always consult qualified legal authorities or file an FIR on the 
+        <a href="https://cybercrime.gov.in" target="_blank" rel="noopener" style="color:var(--cyan);">Cyber Crime Portal</a>.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
