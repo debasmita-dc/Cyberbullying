@@ -13,10 +13,15 @@ Provide a simple web-based interface for analysis and reporting
 🛠️ Technologies Used
 
 Python
+
 Flask (Web Framework)
+
 NLP & Machine Learning (BERT-based model)
+
 SQLite (Database)
+
 HTML, CSS, Bootstrap
+
 Chart.js (Dashboard Visualization)
 
 ⚙️ System Architecture
